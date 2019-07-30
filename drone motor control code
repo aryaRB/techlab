@@ -1,0 +1,54 @@
+const int pwm = 2 ;  //initializing pin 2 as pwm
+const int 1 = 8 ;
+const int 2= 9 ;
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+
+{
+pinMode(pwm,OUTPUT) ;    
+pinMode(1,OUTPUT) ;  
+pinMode(2,OUTPUT) ;
+}
+}
+
+void loop() {
+
+   
+  
+  
+  // put your main code here, to run repeatedly:
+//For Clock wise motion , in_1 = High , in_2 = Low
+
+digitalWrite(1,HIGH) ;
+digitalWrite(2,LOW) ;
+analogWrite(pwm,255) ;
+delay(3000) ;  
+
+//For Anti Clock-wise motion - IN_1 = LOW , IN_2 = HIGH
+digitalWrite(1,LOW) ;
+digitalWrite(2,HIGH) ;
+analogWrite(pwm,255) ;
+delay(3000) ;
+
+digitalWrite(1,HIGH) ;
+digitalWrite(2,HIGH) ;
+
+digitalWrite(1,LOW) ;
+digitalWrite(2,LOW) ;
+
+
+digitalWrite(1,HIGH) ;//clockwise for 56% forward
+digitalWrite(2,LOW) ;
+analogWrite(pwm,148) ;
+delay(3000) ;
+
+
+digitalWrite(1,LOW) ;//anticlockwise for 22% backward
+digitalWrite(2,HIGH) ;
+analogWrite(pwm,56) ;
+delay(3000) ;
+
+ }
